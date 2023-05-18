@@ -41,6 +41,7 @@ export default class Album extends React.Component {
                   trackId={ elem.trackId }
                   trackName={ elem.trackName }
                   previewUrl={ elem.previewUrl }
+                  trackInfo={ elem }
                 />))
             }
           </div>
