@@ -16,7 +16,7 @@ export default class Search extends React.Component {
   enableButton = ({ target }) => {
     const min = 2;
     const { value } = target;
-    if (value.length > min) {
+    if (value.length >= min) {
       this.setState(() => ({
         name: value,
         savedName: value,
@@ -55,6 +55,7 @@ export default class Search extends React.Component {
             <label>
               <input
                 type="text"
+                // value={ name }
                 name="name"
                 data-testid="search-artist-input"
                 onChange={ this.enableButton }
@@ -73,7 +74,11 @@ export default class Search extends React.Component {
         {
           apiRequest && apiRequest.length > 0 && (
             <div>
-              <h3>{`Resultado de álbuns de: ${savedName}`}</h3>
+              <h2>
+                Resultado de álbuns de:
+                {' '}
+                {savedName}
+              </h2>
               <ul>
                 {
                   apiRequest.map((elem) => (
@@ -83,7 +88,7 @@ export default class Search extends React.Component {
                       <p>{ elem.collectionName }</p>
                       <Link
                         data-testid={ `link-to-album-${elem.collectionId}` }
-                        to={ `album/${elem.collectionId}` }
+                        to={ `/album/${elem.collectionId}` }
                       >
                         Mais informações
                       </Link>

@@ -1,0 +1,25 @@
+/* *{
+  background-color: black;
+  text-align: center;
+}
+form {
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+button{
+  width: 250px;
+  padding: 9px;
+  color: white;
+  border-radius: 10px;
+  background-color:rgb(187, 50, 73);
+}
+input{
+  width: 250px;
+  padding: 9px;
+  color: white;
+  border-radius: 10px;
+  margin: 20px;
+} */

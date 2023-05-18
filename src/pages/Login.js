@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
+import '../css/login.css';
 
 export default class Login extends React.Component {
   state = {
@@ -41,10 +42,10 @@ export default class Login extends React.Component {
     return (
       loading ? (<Loading />) : (
         <div data-testid="page-login">
-          <form>
-            <label>
-              Nome:
+          <form className="form">
+            <label className="label">
               <input
+                className="input"
                 name="name"
                 data-testid="login-name-input"
                 placeholder="Digite o seu nome:"
